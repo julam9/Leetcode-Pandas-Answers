@@ -1,8 +1,8 @@
 import pandas as pd
 
 def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
-    if employee["salary"].nunique() > N:
-        salary_Nth = employee.sort_values(by="salary", ascending=False)[N]
-        return pd.DataFrame(data={f"getNthHighestSalary({N})" : employee.sort_values(by="salary", ascending=False)}) 
+    ans = sorted(employee["salary"].unique(), reverse=True)[N-1:N]
+    if (N > employee["salary"].nunique() or N <= 0) :
+        return pd.DataFrame(data={f"getNthHighestSalary({N})" : None}, index=[" "])
     else:
-        return pd.DataFrame(data={f"getNthHighestSalary{N}" : None}, index=" ")
+        return pd.DataFrame(data={f"getNthHighestSalary({N})" : ans})
