@@ -1,5 +1,6 @@
 import pandas as pd
 
 def consecutive_numbers(logs: pd.DataFrame) -> pd.DataFrame:
-    logs["next1element"] = logs.loc[1, 1:]
-    logs["next2element"] = logs.loc[1, 2:]
+    logs["num2"] = logs["num"].shift(periods=1)
+    logs["ConsecutiveNums"] = logs["num2"].shift(periods=1)
+    return logs[(logs["num"] == logs["num2"]) & (logs["num2"] == logs["ConsecutiveNums"])].iloc[:, 3:]
