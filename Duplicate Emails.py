@@ -1,4 +1,5 @@
 import pandas as pd 
 
-def duplicate_emails(person:pd.DataFrame) -> pd.DataFrame:
-    return pd.DataFrame(data={"email" : person["email"].value_counts().reset_index().query("count > 1").iloc[:, 0]})
+class Solution():
+    def duplicate_emails(person:pd.DataFrame) -> pd.DataFrame:
+        return pd.DataFrame(data={"email" : person["email"].value_counts().reset_index().query("count > 1").iloc[:, 0]})

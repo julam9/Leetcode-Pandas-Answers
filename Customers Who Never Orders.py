@@ -1,4 +1,5 @@
 import pandas as pd
 
-def find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFrame:
-    return customers["name"]
+class Solution():
+    def find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFrame:
+        return customers["name"]
