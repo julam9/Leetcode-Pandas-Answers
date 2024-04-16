@@ -2,7 +2,7 @@ import pandas as pd
 
 def delete_duplicate_emails(person: pd.DataFrame) -> None:
     '''
-    select only email with concurences equal to 1
+    using the drop_duplicates function from pandas module
     '''
     
-    return pd.DataFrame(data={"email" : person["email"].value_counts().reset_index().query("count > 1").iloc[:, 0]})
+    person.sort_values(by="id").drop_duplicates(subset=["email"], inplace=True)
