@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Solution():   
+class Solution:   
     def order_scores(scores: pd.DataFrame) -> pd.DataFrame :
         
         # ordering the scores from the highest to the lowest

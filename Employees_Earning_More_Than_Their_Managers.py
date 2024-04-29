@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-class Solution :
+class Solution:
     def find_employees(employees:pd.DataFrame) -> pd.DataFrame:
         
         # joining the table on the table itself (self join) to get who is every employee manager and their manager salary

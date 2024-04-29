@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Solution():
+class Solution:
     def rising_temperature(weather: pd.DataFrame) -> pd.DataFrame :
         # sorting by date
         weather = weather.sort_values(by="recordDate")

@@ -1,6 +1,6 @@
 import pandas as pd 
 
-class Solution():
+class Solution:
     def duplicate_emails(person:pd.DataFrame) -> pd.DataFrame:
         
         '''

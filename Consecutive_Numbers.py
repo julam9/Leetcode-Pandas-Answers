@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Solution():
+class Solution:
     def consecutive_numbers(logs: pd.DataFrame) -> pd.DataFrame:
         
         # inserting a new variable where it is the first element after (first lag of) the current element of orig column

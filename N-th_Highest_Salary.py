@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Solution():
+class Solutions:
     def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
         
         # sorting the salary from the highest to lowest. After that, select the N-th highest 

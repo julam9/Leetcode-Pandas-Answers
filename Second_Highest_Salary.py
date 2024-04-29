@@ -1,6 +1,6 @@
 import pandas as pd
 
-class Solution():
+class Solution:
     def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
         
         # checking if the salaries are vary 
